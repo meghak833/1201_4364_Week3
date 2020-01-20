@@ -14,6 +14,7 @@ import java.util.Random;
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author Megha Patel
  * Modified: Bradley Persaud
+ * Student number: 991360032
  */
 public class CardTrick {
     
