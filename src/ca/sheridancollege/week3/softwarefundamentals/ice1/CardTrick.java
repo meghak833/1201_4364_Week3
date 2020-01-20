@@ -13,7 +13,8 @@ import java.util.*;
  */
 public class CardTrick {
     public static void main(String[] args)
-    {    Random rd = new Random();
+    {   Random rd = new Random();
+        Scanner sc = new Scanner (System.in); 
         
         Card [] magicHand = new Card[7];
         
@@ -33,8 +34,35 @@ public class CardTrick {
         }
 
         //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+        int number;
+        do
+        {
+            System.out.println("Pick a number from 1-13");
+            number = Integer.parseInt(sc.nextLine());
+            if (number <= 0 || number > 13)
+            System.out.println("Wrong input! Please try again!");
+        }
+        while (number <= 0 || number > 13);
+        int suit;
+        String suitValue = "";
+        do
+        {
+            
+            System.out.println("Pick a suit: (1 for Hearts, 2 for Diamonds, 3 for Spades, 4 for Clubs): ");
+            suit = sc.nextInt();
+            if (suit == 1)
+            suitValue = "Heart";
+            else if(suit == 2)
+            suitValue = "Diamonds";
+            else if (suit == 3)
+            suitValue = "Spades";
+            else if (suit == 4)
+            suitValue = "Clubs";
+        }
+        while (suit < 0 || suit > 4);
+        System.out.println("Pick your lucky Card!");
+        System.out.println ("Your card is: "+number+" "+suitValue);
+        
     }
     
 }
