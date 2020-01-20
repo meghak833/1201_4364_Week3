@@ -25,13 +25,21 @@ public class CardTrick {
             Card c = new Card();
             Random rand = new Random();        
             c.setValue(rand.nextInt(13) + 1);
-            c.setSuit(Card.SUITS[rand.nextInt(3)]);
+            c.setSuit(Card.SUITS[rand.nextInt(4)]);
             magicHand [i] = c;
+            System.out.println("The card just added was a " + c);
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+        System.out.println("Enter a special card");
+        Card userCard = new Card();
+        userCard.setSuit(Card.SUITS[2]);
+        userCard.setValue(10);
+        for (int i = 0; i < magicHand.length; i++) {
+          if(magicHand[i].getSuit().equals(userCard.getSuit())&& magicHand[i].getValue()==userCard.getValue()) {
+              System.out.println("Your card " + userCard + " was found in the deck!!!");
+          } 
+        }
+        
     }
     
 }
