@@ -19,6 +19,7 @@ public class CardTrick {
     {
         Random rd= new Random();
         Card[] magicHand = new Card[7];
+        Scanner sc = new Scanner(System.in);
         
         for(int i=0; i<magicHand.length; i++)
         {
@@ -38,7 +39,13 @@ public class CardTrick {
      
         
         //insert code to ask the user for Card value and suit, create their card
+        System.out.println("Please pick a numberbetween1-13");
+        int userValue = Integer.parseInt(sc.nextLine());
+        
+        System.out.println("Please Choose a Suit");
+        String userSuit = sc.nextLine();
         // and search magicHand here
+        System.out.println("Your Lucky Card is " +userValue + " of " + userSuit);
         //Then report the result here
     }
     
