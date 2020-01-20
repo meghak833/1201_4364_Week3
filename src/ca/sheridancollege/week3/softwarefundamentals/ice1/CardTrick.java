@@ -12,10 +12,12 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * @author Megha Patel
  * modified by: Yanjun Fang(991562361)
  */
+import java.util.*;
 public class CardTrick {
     
     public static void main(String[] args)
     {
+        Scanner input = new Scanner(System.in);
         Card[] magicHand = new Card[7];
         
         for (int i=0; i<magicHand.length; i++)
