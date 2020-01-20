@@ -30,6 +30,14 @@ public class CardTrick {
         }
                
         //insert code to ask the user for Card value and suit, create their card
+        System.out.print("Please enter your card value:");
+        int v = input.nextInt();
+        System.out.print("Please enter your card suit:");
+        String s = input.next();
+        Card userCard = new Card();
+        userCard.setValue(v);
+        userCard.setSuit(s);
+        System.out.println("the user card is"+userCard);
         // and search magicHand here
         //Then report the result here
     }
