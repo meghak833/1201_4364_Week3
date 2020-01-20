@@ -20,8 +20,9 @@ public class CardTrick {
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
-        Card luckyCard = new Card;
+        Card luckyCard = new Card();
         Random rnd = new Random();
+        boolean match = false;
         
         for (int i=0; i<magicHand.length; i++)
         {
@@ -35,10 +36,11 @@ public class CardTrick {
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
-        System.out.println("Your lucky assigned card of the day is the 7 of Spades!");
         luckyCard.setValue(7);
         luckyCard.setSuit(Card.SUITS[2]);
+        System.out.printf("Your lucky assigned card of the day is the %d of %s!", luckyCard.getValue(), luckyCard.getSuit());
         
+               
     }
     
 }
