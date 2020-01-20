@@ -6,6 +6,7 @@
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
 
 import java.util.Random;
+import java.util.Scanner;
 
 
 /**
@@ -30,9 +31,25 @@ public class CardTrick {
             Card c = new Card();
             
             c.setValue(rand.nextInt(13)+1);
-            c.setSuit(Card.SUITS[rand.nextInt(3)]);
+            c.setSuit(Card.SUITS[rand.nextInt(4)]);
             magicHand [i] = c;
+            
+            System.out.println("Your card was added: " + c);
         }
+
+   
+            Card playerCard = new Card();
+            playerCard.setSuit(Card.SUITS[1]);
+            playerCard.setValue(8);
+            
+        for(int i = 0; i < magicHand.length; i++)
+        {
+            if(magicHand[i].getSuit().equals(playerCard.getSuit()) && magicHand[i].getValue()==playerCard.getValue())
+            {
+                System.out.println("Your card was" + playerCard);
+            }
+        }
+            
         
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
